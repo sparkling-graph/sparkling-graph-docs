@@ -1,1 +1,3 @@
 sphinxcontrib-scaladomain
+sphinx_rtd_theme
+
