@@ -66,7 +66,9 @@ Presented snipet will load graph from file with format:
 	'<numerical_id_of_vertex_1>';'<numerical_id_of_vertex_2>'
 
 
+
 ### Loading graphs with vertex identifiers that are not numerical
+
 
 Because in some cases vertices identifiers can be not numerical (username as string). You can load this kind of graph specifying that `Indexing`_ is required:
 
