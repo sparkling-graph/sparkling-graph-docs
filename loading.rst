@@ -34,7 +34,43 @@ To load graph from `CSV`_ file you must use `CSV implementation`_ of `GraphLoade
 	val graph=LoadGraph.from(CSV(filePath)).load()
 
 
- 
+That is simplest way of loading standard CSV file:
+
+.. code-block:: text
+
+	"vertex1","vertex2"
+	"<numerical_id_of_vertex_1>","<numerical_id_of_vertex_2>"
+
+
+In order to change file format you can use parameters like:
+
+.. code-block:: scala
+
+	import ml.sparkling.graph.loaders.csv.GraphFromCsv.LoaderParameters.{Delimiter,Quotation}		
+	import ml.sparkling.graph.api.loaders.GraphLoading.LoadGraph
+	import ml.sparkling.graph.loaders.csv.GraphFromCsv.CSV
+	import org.apache.spark.SparkContext
+
+	implicit ctx:SparkContext=??? 
+	// initialize your SparkContext as implicit value so it will be passed automatically to graph loading API
+
+	val filePath="your_graph_path.csv"
+	val graph=LoadGraph.from(CSV(filePath)).using(Delimiter(";")).using(Quotation("'")).load()
+
+
+Presented snipet will load graph from file with format:
+
+.. code-block:: text
+
+	'vertex1';'vertex2'
+	'<numerical_id_of_vertex_1>';'<numerical_id_of_vertex_2>'
+
+
+Full list of CSV loading parameters is available in `here`_
+
+
+.. _here: http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.loaders.csv.GraphFromCsv$$LoaderParameters$
+
 .. _GraphLoader: http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.api.loaders.GraphLoading$$GraphLoader
 
 .. _LoadGraph: http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.api.loaders.GraphLoading$$LoadGraph$
