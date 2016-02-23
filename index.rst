@@ -6,11 +6,15 @@
 Welcome to SparklingGraph's documentation!
 ==========================================
 
+For bigger insight please refere to  `a API`_ documentation in ScalaDocs.
+
 Contents:
 
 .. toctree::
    :maxdepth: 2
 
+   loading
+   measures
 
 
 Indices and tables
@@ -20,3 +24,5 @@ Indices and tables
 * :ref:`modindex`
 * :ref:`search`
 
+
+.. _a API: http://sparkling-graph.github.io/sparkling-graph/latest/api
