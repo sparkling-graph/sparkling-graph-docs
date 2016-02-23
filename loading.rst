@@ -99,7 +99,7 @@ That approach gives you ability to load graphs from CSV files with any structure
 
 Full list of CSV loading parameters is available in `here`_
 
-.. _Indexing: http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.loaders.csv.GraphFromCsv$$LoaderParameters$$Indexing
+.. _Indexing: http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.loaders.csv.GraphFromCsv$$LoaderParameters$$Indexing$
 
 .. _here: http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.loaders.csv.GraphFromCsv$$LoaderParameters$
 
