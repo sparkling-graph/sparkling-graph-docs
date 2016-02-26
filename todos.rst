@@ -1,6 +1,8 @@
 Project TO-DO
 ===================
 
-Please check `issue tracker`_
+Please check `code issue tracker`_ and `docs issue tracker`_
 
-.. _issue tracker: https://github.com/sparkling-graph/sparkling-graph-docs/issues
+.. _code issue tracker: https://github.com/sparkling-graph/sparkling-graph-docs/issues
+
+.. _docs issue tracker: https://github.com/sparkling-graph/sparkling-graph-docs/issues
