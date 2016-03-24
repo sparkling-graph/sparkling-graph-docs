@@ -1,12 +1,8 @@
 Project TO-DO
 ===================
 
+Please check `code issue tracker`_ and `docs issue tracker`_
 
+.. _code issue tracker: https://github.com/sparkling-graph/sparkling-graph-docs/issues
 
-1. Prepare How To
-2. Document repository structure
-3. Create :doc:`measures` documentation
-4. Implement community detection methods (like `PSCAN`_)
-
-
-.. _PSCAN: https://github.com/sparkling-graph/sparkling-graph/issues/2
+.. _docs issue tracker: https://github.com/sparkling-graph/sparkling-graph-docs/issues
