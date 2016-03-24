@@ -102,6 +102,70 @@ That approach gives you ability to load graphs from CSV files with any structure
 
 Full list of CSV loading parameters is available in `here`_
 
+
+Loading from GraphML
+--------------------
+To load graph from `GraphML`_ XML file you must use `GraphML implementation`_ of `GraphLoader`_ trait:
+
+.. code-block:: scala
+
+	import ml.sparkling.graph.api.loaders.GraphLoading.LoadGraph
+	import ml.sparkling.graph.loaders.graphml.GraphFromGraphML.GraphML
+	import org.apache.spark.SparkContext
+
+	implicit ctx:SparkContext=??? 
+	// initialize your SparkContext as implicit value so it will be passed automatically to graph loading API
+
+	val filePath="your_graph_path.xml"
+
+	val graph=LoadGraph.from(GraphML(filePath)).load()
+
+That is simplest way of loading standard `GraphML`_  XML file:
+
+.. code-block:: xml
+
+	<?xml version="1.0" encoding="UTF-8"?>
+	<graphml xmlns="http://graphml.graphdrawing.org/xmlns"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+	    <key id="v_name" for="node" attr.name="name" attr.type="string"/>
+	    <key id="v_type" for="node" attr.name="type" attr.type="string"/>
+	    <graph id="G" edgedefault="undirected">
+	        <node id="n0">
+	            <data key="v_name">name0</data>
+	            <data key="v_type">type0</data>
+	        </node>
+	        <node id="n1">
+	            <data key="v_name">name1</data>
+	        </node>
+	        <node id="n2">
+	            <data key="v_name">name2</data>
+	        </node>
+	        <node id="n3">
+	            <data key="v_name">name3</data>
+	        </node>
+	        <edge id="e1" source="n0" target="n1"/>
+	        <edge id="e2" source="n1" target="n2"/>
+	    </graph>
+	</graphml>
+
+All attributes associated with vertices will be puted into `GraphProperties`_ type which expands to ``Map[String,Any]``. By default each edge and vertex has ``id`` attribute.
+
+.. code-block:: scala
+
+	import ml.sparkling.graph.api.loaders.GraphLoading.LoadGraph
+	import ml.sparkling.graph.loaders.graphml.GraphFromGraphML.{GraphProperties, GraphML}
+	import org.apache.spark.SparkContext
+
+	implicit ctx:SparkContext=??? 
+	// initialize your SparkContext as implicit value so it will be passed automatically to graph loading API
+
+	val filePath="your_graph_path.xml"
+
+	val graph: Graph[GraphProperties, GraphProperties] =LoadGraph.from(GraphML(filePath)).load()
+
+
+
 .. _Indexing: http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.loaders.csv.GraphFromCsv$$LoaderParameters$$Indexing$
 
 .. _here: http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.loaders.csv.GraphFromCsv$$LoaderParameters$
@@ -114,7 +178,13 @@ Full list of CSV loading parameters is available in `here`_
 
 .. _CSV implementation: http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.loaders.csv.GraphFromCsv$$CSV$
 
+.. _GraphML implementation: http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.loaders.graphml.GraphFromGraphML$$GraphML$
+
 .. _CSV: https://en.wikipedia.org/wiki/Comma-separated_values
+
+.. _GraphML: http://graphml.graphdrawing.org/
+
+.. _GraphProperties: http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.loaders.graphml.GraphFromGraphML$
 
 
 
