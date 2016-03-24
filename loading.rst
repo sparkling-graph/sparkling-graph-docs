@@ -120,7 +120,7 @@ To load graph from `GraphML`_ XML file you must use `GraphML implementation`_ of
 
 	val graph=LoadGraph.from(GraphML(filePath)).load()
 
-That is simplest way of loading standard `GraphML`_  XML file:
+That is simplest way of loading standard `GraphML`_  XML file (vertices are automatically indexed, and receive ``VertexId`` identifier ):
 
 .. code-block:: xml
 
@@ -163,6 +163,7 @@ All attributes associated with vertices will be puted into `GraphProperties`_ ty
 	val filePath="your_graph_path.xml"
 
 	val graph: Graph[GraphProperties, GraphProperties] =LoadGraph.from(GraphML(filePath)).load()
+	val verticesIdsFromFile: Array[String] = graph.vertices.map(_._2("id").asInstanceOf[String]).collect() 
 
 
 
