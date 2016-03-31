@@ -15,6 +15,7 @@ Contents:
    
    howto
    loading
+   comunities
    measures
    todos
 
