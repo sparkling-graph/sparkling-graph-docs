@@ -7,7 +7,7 @@ Eigenvector centrality measure give us information about how given node is impor
 
 Eigenvector centrality is more general approach than PageRank. For further informations please refere to [Newman]_. 
 
-Library uses `pregel <http://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.graphx.GraphOps@pregel[A](A,Int,EdgeDirection)((VertexId,VD,A)⇒VD,(EdgeTriplet[VD,ED])⇒Iterator[(VertexId,A)],(A,A)⇒A)(ClassTag[A]):Graph[VD,ED]>`_ operator in order to do computations. Computations are done using BSP paradigm. 
+Library uses `pregel <http://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.graphx.GraphOps@pregel[A](A,Int,EdgeDirection)((VertexId,VD,A)⇒VD,(EdgeTriplet[VD,ED])⇒Iterator[(VertexId,A)],(A,A)⇒A)(ClassTag[A]):Graph[VD,ED]>`_ operator in order to do computations. 
 
 .. code-block:: scala
 	
