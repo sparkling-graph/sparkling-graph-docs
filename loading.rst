@@ -1,8 +1,7 @@
 Loading graph data
 ===================
 
-
-Currently library support loading graphs from CSV files only. More formats are planned in future. 
+Library support loading graphs from multiple file formats. Nevertheless, we will be implementing more of them in next releases.
 
 
 Graph loading API
