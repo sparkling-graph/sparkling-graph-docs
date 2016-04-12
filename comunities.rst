@@ -23,8 +23,8 @@ where `N(v)` is neighbours set of vertex `v` . Edeges with similarity lower than
 Main part is based on label propagation and is implemented using apropriate `data structures <http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.operators.algorithms.pscan.PSCAN$$PSCANData>`_ and `PREGEL operator <http://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.graphx.GraphOps@pregel[A](A,Int,EdgeDirection)((VertexId,VD,A)⇒VD,(EdgeTriplet[VD,ED])⇒Iterator[(VertexId,A)],(A,A)⇒A)(ClassTag[A]):Graph[VD,ED]>`_ 
 
 .. code-block:: scala
-
-	import ml.sparkling.graph.operators.MeasureTest
+	
+	import ml.sparkling.graph.operators.OperatorsDSL._
 	import ml.sparkling.graph.operators.algorithms.pscan.PSCAN.ComponentID
 	import org.apache.spark.SparkContext
 	import org.apache.spark.graphx.Graph
@@ -41,12 +41,11 @@ Main part is based on label propagation and is implemented using apropriate `dat
 You can also use more readable method using DSL
 
 .. code-block:: scala
-
-	import ml.sparkling.graph.operators.MeasureTest
+	
+	import ml.sparkling.graph.operators.OperatorsDSL._
 	import ml.sparkling.graph.operators.algorithms.pscan.PSCAN.ComponentID
 	import org.apache.spark.SparkContext
 	import org.apache.spark.graphx.Graph
-	import PSCAN.DSL
 
 	implicit ctx:SparkContext=??? 
 	// initialize your SparkContext as implicit value
