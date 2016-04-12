@@ -3,7 +3,7 @@ Eigenvector centrality
 
 Eigenvector centrality measure give us information about how given node is important in network. It is  based on degree centrality. In here we have more sophisticated version, where connections are not equal. 
 
-:math:`E(x)=\frac{1}{\lambda}\sum{A_{ij}x_j}_{j=1}^{n}`
+:math:`E(x)=\frac{1}{\lambda}\sum_{j=1}^{n}{A_{ij}x_j}`
 
 Eigenvector centrality is more general approach than PageRank. For further informations please refere to [Newman]_. 
 
@@ -21,7 +21,7 @@ Library uses `pregel <http://spark.apache.org/docs/latest/api/scala/index.html#o
 	// load your graph (for example using Graph loading API)
 
 	val centralityGraph: Graph[Double, _] = graph.eigenvectorCentrality()
-	// Graph where each vertex is asociated with its closenss centrality
+	// Graph where each vertex is asociated with its eigenvector centrality
 
 You can also compute eigenvector centrality for graph treating it as undirected one:
 

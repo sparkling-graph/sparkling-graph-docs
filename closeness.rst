@@ -3,7 +3,7 @@ Closeness centrality
 
 Closeness centrality measure is defined as inverted sum of distances (``d(y,x)``) from given node to all other nodes. Distance is defined as length of shortest path. 
 
-:math:`C(x)=\frac{1}{\sum{d(y,x)}_{y \neq x}}`
+:math:`C(x)=\frac{1}{\sum_{y \neq x}{d(y,x)}}`
 
 Measure can be understood as how far away from other nodes given node is located. For further informations please refere to [Sabidussi]_. 
 
