@@ -1,7 +1,7 @@
 Local Clustering Coefficient
 =============================
 
-Local Clustering Coefficient for vertex 
+Local Clustering Coefficient for vertex tells us howe close its neighbors are. It is number of exsisting connections in neghboorhod divided by number of all possible connections. 
 
 :math:`LC(x)=\sum_{v \in N(x)}{\frac{|N(x) \cap N(v)|}{|N(x)|*(|N(x)|-1)}}`
 
