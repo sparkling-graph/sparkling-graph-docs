@@ -30,3 +30,4 @@ Curretnly you can use following measures:
    degree
    neighborhoodConnectivity
    vertexEmbeddedness
+   localClustering

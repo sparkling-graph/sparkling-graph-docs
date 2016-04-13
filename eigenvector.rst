@@ -23,7 +23,7 @@ Library uses `pregel <http://spark.apache.org/docs/latest/api/scala/index.html#o
 	val centralityGraph: Graph[Double, _] = graph.eigenvectorCentrality()
 	// Graph where each vertex is asociated with its eigenvector centrality
 
-You can also compute eigenvector centrality for graph treating it as undirected one:
+You can also compute eigenvector centrality for graph treated as undirected one:
 
 .. code-block:: scala
 	
@@ -40,6 +40,8 @@ You can also compute eigenvector centrality for graph treating it as undirected 
 	val centralityGraph: Graph[Double, _] = graph.eigenvectorCentrality(VertexMeasureConfiguration(treatAsUndirected=true))
 	// Graph where each vertex is asociated with its eigenvector centrality computed for undirected graph
 
+
+References: 
 
 .. [Newman]  Newman, M. E. (2008). The mathematics of networks. The new palgrave encyclopedia of economics, 2(2008):1–12., `PDF <http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.131.8175&rep=rep1&type=pdf>`_
 

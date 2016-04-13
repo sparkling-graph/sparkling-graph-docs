@@ -45,7 +45,7 @@ In order to controll memmory consumption during computation you can use `VertexM
 	// Graph where each vertex is asociated with its closenss centrality
 
 
-You can also compute closeness centrality for graph treating it as undirected one:
+You can also compute closeness centrality for graph treated as undirected one:
 
 .. code-block:: scala
 	
@@ -62,5 +62,7 @@ You can also compute closeness centrality for graph treating it as undirected on
 	val centralityGraph: Graph[Double, _] = graph.closenessCentrality(VertexMeasureConfiguration(treatAsUndirected=true))
 	// Graph where each vertex is asociated with its closenss centrality computed for undirected graph
 
+
+References: 
 
 .. [Sabidussi]  Sabidussi, G. (1966).  The centrality index of a graph.Psychometrika, 31(4):581–603, `Springer <http://link.springer.com/article/10.1007%2FBF02289527?LI=true>`_

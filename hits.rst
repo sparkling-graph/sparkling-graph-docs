@@ -1,7 +1,11 @@
 HITS
 ===================
 
+After measure computation, each vertex of graph will have assigned two scores ``(hub,authority)``. Where ``hub`` score is proportional to sum of ``authority`` score of its neighbours, and ``authority`` score is proportional to sum of ``hub`` score of its neighbours. 
 
+For further informations please refere to [Kleinberg]_. 
+
+Here you can see how to use measure:
 
 .. code-block:: scala
 	
@@ -18,7 +22,7 @@ HITS
 	// Graph where each vertex is asociated with its hits score (represented as a tuple (auth,hub):(Double,Double))
 
 
-You can also compute HITS for graph treating it as undirected one:
+You can also compute HITS for graph treated as undirected one:
 
 .. code-block:: scala
 	
@@ -35,5 +39,7 @@ You can also compute HITS for graph treating it as undirected one:
 	val centralityGraph: Graph[Double, _] = graph.hits(VertexMeasureConfiguration(treatAsUndirected=true))
 	// Graph where each vertex is asociated with its hits score computed for undirected graph
 
+
+References: 
 
 .. [Kleinberg]  Kleinberg, J. M. (1999). Hubs, authorities, and communities. ACM Computing Surveys (CSUR), 31(4es):5.,  `PDF <http://www.csee.umbc.edu/~kolari1/Mining/papers/ft_gateway.cfm.pdf>`_

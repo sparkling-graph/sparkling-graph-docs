@@ -8,8 +8,7 @@ Using library you can easily use state-of-the-art methods for community detectio
 SCAN (PSCAN)
 ------------------
 
-Implementation is based on `PSCAN: A Parallel Structural Clustering Algorithm for Big Networks in MapReduce <http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6531844&tag=1>`_
-`PSCAN <http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.operators.algorithms.pscan.PSCAN$>`_ object implements the whole logic of algorithm. Method `computeConnectedComponents(<graph>,<epsilon>)`, takes two parameters:
+Implementation is based on [Zhao]_. `PSCAN <http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.operators.algorithms.pscan.PSCAN$>`_ bject implements the whole logic of algorithm. Method `computeConnectedComponents(<graph>,<epsilon>)`, takes two parameters:
 
 	* `graph` - on with algorithm will be executed
 	* :math:`\epsilon` - used for graph pruning based on similarity measure of edges.
@@ -54,3 +53,8 @@ You can also use more readable method using DSL
 
 	val components: Graph[ComponentID, Int] = graph.PSCAN(epsilon=0.5)
 	// Graph where each vertex is asociated with its component identifier
+
+
+References: 
+
+.. [Zhao] Zhao, W., Martha, V., & Xu, X. (2013, March). PSCAN: a parallel Structural clustering algorithm for big networks in MapReduce. In Advanced Information Networking and Applications (AINA), 2013 IEEE 27th International Conference on (pp. 862-869). IEEE. `PDF <http://ieeexplore.ieee.org/xpls/abs_all.jsp?arnumber=6531844&tag=1>`_
