@@ -5,7 +5,7 @@ Local Clustering Coefficient for vertex tells us howe close its neighbors are. I
 
 :math:`LC(x)=\sum_{v \in N(x)}{\frac{|N(x) \cap N(v)|}{|N(x)|*(|N(x)|-1)}}`
 
-Where ``N(x)`` is set of neighbours of vertex ``x``
+Where :math:`N(x)` is set of neighbours of vertex :math:`x`
 
 For further informations please refere to [Watts]_. 
 

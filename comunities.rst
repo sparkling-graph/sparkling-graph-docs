@@ -17,7 +17,7 @@ Mentioned similarity is computed as follows:
 
 :math:`sim(v,u)=\frac{|N(v)\cap{} N(u)|}{\sqrt{|N(v)||N(u)|}}`
 
-where `N(v)` is neighbours set of vertex `v` . Edeges with similarity lower than :math:`\epsilon` (:math:`sim(v,u)<\epsilon`) are removed from graph before main part of community detection.
+where :math:`N(v)` is neighbours set of vertex :math:`v` . Edeges with similarity lower than :math:`\epsilon` (:math:`sim(v,u)<\epsilon`) are removed from graph before main part of community detection.
 
 Main part is based on label propagation and is implemented using apropriate `data structures <http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.operators.algorithms.pscan.PSCAN$$PSCANData>`_ and `PREGEL operator <http://spark.apache.org/docs/latest/api/scala/index.html#org.apache.spark.graphx.GraphOps@pregel[A](A,Int,EdgeDirection)((VertexId,VD,A)⇒VD,(EdgeTriplet[VD,ED])⇒Iterator[(VertexId,A)],(A,A)⇒A)(ClassTag[A]):Graph[VD,ED]>`_ 
 
