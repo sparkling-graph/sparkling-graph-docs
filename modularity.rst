@@ -5,7 +5,7 @@ Modularity measures strength of division of a network into communities (modules,
 
 :math:`Q=\sum_{i=1}^{k}{(e_{ii}-a_i^2)}`
 
-Where :math:`k` is number of communities, :math:`e_{ii}`  is number of edges that has both ends in community :math:`i` and :math:`a_i` is number of edges with at least one end in community :math:`i`
+Where :math:`k` is number of communities, :math:`e_{ii}`  is number of edges that has both ends in community :math:`i` and :math:`a_i` is number of edges with  one end in community :math:`i`
 
 
 For further informations please refere to [lecture]_ and [Newman]_. 
