@@ -6,7 +6,7 @@ Neighborhood donnectivity is a measure based on degree centrality.  Connectivity
 
 :math:`NC(x)=\frac{\sum_{k \in N(x)}{|N(k)|}}{|N(x)|}`
 
-Where ``N(x)`` is set of neighbours of vertex ``x``
+Where :math:`N(x)` is set of neighbours of vertex :math:`x`
 
 For further informations please refere to [Maslov]_. 
 

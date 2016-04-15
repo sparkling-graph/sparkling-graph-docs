@@ -5,7 +5,7 @@ Freeman's centrality tells us how heterogenous is degree centrality ammong verti
 
 :math:`FC(g)=\frac{\sum_{x \in g}{N_{max}-|N(x)|}}{(|g|-1)*(|g|-2)}`
 
-Where ``g`` is given graph, ``N(x)`` returns set of neighbours of vertex ``x``, ``|g|`` is number of vertices in graph ``g`` and :math:`N_{max}` is maximal degree that can be observed in network.
+Where :math:`g` is given graph, :math:`N(x)` returns set of neighbours of vertex :math:`x`, :math:`|g|` is number of vertices in graph :math:`g` and :math:`N_{max}` is maximal degree that can be observed in network.
 
 For further informations please refere to [Freeman]_. 
 

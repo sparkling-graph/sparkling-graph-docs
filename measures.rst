@@ -52,3 +52,4 @@ Curretnly you can use following measures:
 	   :maxdepth: 2
 	   
 	   freeman
+	   modularity

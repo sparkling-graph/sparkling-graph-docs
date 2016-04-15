@@ -6,7 +6,7 @@ Is an average embededdness of neighbours of given vertex.
 
 :math:`VE(x)=\frac{1}{|N(x)|}\sum_{v \in N(x)}{\frac{|N(x) \cap N(v)|}{|N(x) \cup N(v)|}}`
 
-Where ``N(x)`` is set of neighbours of vertex ``x``
+Where :math:`N(x)` is set of neighbours of vertex :math:`x`
 
 For further informations please refere to [Dong]_. 
 
