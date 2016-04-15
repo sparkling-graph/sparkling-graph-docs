@@ -17,6 +17,7 @@ Contents:
    loading
    comunities
    measures
+   links
    todos
 
 

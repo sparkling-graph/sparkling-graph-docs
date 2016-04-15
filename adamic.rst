@@ -14,7 +14,6 @@ Where :math:`N(x)` is set of neighbours of vertex :math:`x`
 	
 	import ml.sparkling.graph.operators.OperatorsDSL._
 	import org.apache.spark.SparkContext
-	import ml.sparkling.graph.api.operators.measures.VertexMeasureConfiguration
 	import org.apache.spark.graphx.Graph
 
 	implicit ctx:SparkContext=??? 
@@ -32,7 +31,6 @@ You can also compute closeness centrality for graph treated as undirected one:
 	
 	import ml.sparkling.graph.operators.OperatorsDSL._
 	import org.apache.spark.SparkContext
-	import ml.sparkling.graph.api.operators.measures.VertexMeasureConfiguration
 	import org.apache.spark.graphx.Graph
 
 	implicit ctx:SparkContext=??? 
