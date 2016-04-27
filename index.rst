@@ -15,6 +15,7 @@ Contents:
    
    howto
    loading
+   generators
    comunities
    measures
    links
