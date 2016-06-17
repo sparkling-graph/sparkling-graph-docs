@@ -27,22 +27,8 @@ For memmory consumption optimization, informations about distances are held in m
 	// Graph where each vertex is asociated with its closenss centrality
 
 
-In order to controll memmory consumption during computation you can use `VertexMeasureConfiguration <http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.api.operators.measures.VertexMeasureConfiguration>`_ . Just provide appropriate implementation of `BucketSizeProvider <http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.api.operators.IterativeComputation$>`_ , for example one that will divide computations into buckets of given size (10 in example).
+In order to limit memmory consumption during computation closeness is computed for each vertex separately. In near future there will be functionality that will let you to decide for how many nodes at once computation should be done. 
 
-.. code-block:: scala
-	
-	import ml.sparkling.graph.operators.OperatorsDSL._
-	import org.apache.spark.SparkContext
-	import ml.sparkling.graph.api.operators.measures.VertexMeasureConfiguration
-	import org.apache.spark.graphx.Graph
-
-	implicit ctx:SparkContext=??? 
-	// initialize your SparkContext as implicit value
-	val graph =???
-	// load your graph (for example using Graph loading API)
-
-	val centralityGraph: Graph[Double, _] = graph.closenessCentrality(VertexMeasureConfiguration((g:Graph[_,_])=>10l))
-	// Graph where each vertex is asociated with its closenss centrality
 
 
 You can also compute closeness centrality for graph treated as undirected one:
