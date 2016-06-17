@@ -18,7 +18,7 @@ To publish signed artifacts to sonatype repository use
 
 .. code-block:: bash
 
-	sbt publishSigned
+	sbt 'release cross'
 
 After that close staging repository and release to central using
 
