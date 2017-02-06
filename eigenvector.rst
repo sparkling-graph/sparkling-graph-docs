@@ -40,6 +40,21 @@ You can also compute eigenvector centrality for graph treated as undirected one:
 	val centralityGraph: Graph[Double, _] = graph.eigenvectorCentrality(VertexMeasureConfiguration(treatAsUndirected=true))
 	// Graph where each vertex is asociated with its eigenvector centrality computed for undirected graph
 
+Eigenvector centrality is implemented using iterative approach and Pregel operator. Because of that you can provide your own computation stop predicate:
+
+.. code-block:: scala
+
+	import org.apache.spark.graphx.GraphLoader
+	import org.apache.spark.sql.SparkSession
+	import org.apache.spark.SparkContext
+	import org.apache.spark.graphx.Graph
+	import ml.sparkling.graph.operators.measures.vertex.eigenvector.EigenvectorCentrality
+	import ml.sparkling.graph.operators.OperatorsDSL._
+
+	val graph = GraphLoader.edgeListFile(sc, "followers.txt").cache()
+	val eic = EigenvectorCentrality.computeEigenvector(graph,VertexMeasureConfiguration(),(iteration,oldValue,newValue)=>iteration<999).vertices
+
+As you can see, you can also use average values of Eigenvector centrality in consecutive iterations. 
 
 References: 
 
