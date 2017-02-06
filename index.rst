@@ -17,6 +17,7 @@ Contents:
    loading
    generators
    comunities
+   coarsening
    measures
    links
    todos
