@@ -8,15 +8,15 @@ Modularity measures strength of division of a network into communities (modules,
 Where :math:`k` is number of communities, :math:`e_{ii}`  is number of edges that has both ends in community :math:`i` and :math:`a_i` is number of edges with  one end in community :math:`i`
 
 
-For further informations please refere to [lecture]_ and [Newman]_. 
+For further informations please refer to [lecture]_ and [Newman]_. 
 
 .. code-block:: scala
-	
+
 	import ml.sparkling.graph.operators.OperatorsDSL._
 	import org.apache.spark.SparkContext
 	import org.apache.spark.graphx.Graph
 
-	implicit ctx:SparkContext=??? 
+	implicit ctx:SparkContext=???
 	// initialize your SparkContext as implicit value
 	val graph =???
 	// load your graph (for example using Graph loading API)
@@ -26,7 +26,7 @@ For further informations please refere to [lecture]_ and [Newman]_.
 
 
 
-References: 
+References:
 
 .. [lecture]  Carl Kingsford (2009). Modularity, `PDF <https://www.cs.umd.edu/class/fall2009/cmsc858l/lecs/Lec10-modularity.pdf>`_
 .. [Newman] Newman, M. E., & Girvan, M. (2004). Finding and evaluating community structure in networks. Physical review E, 69(2), 026113. `PDF <http://arxiv.org/pdf/cond-mat/0308217.pdf>`_
