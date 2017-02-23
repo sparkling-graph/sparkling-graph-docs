@@ -6,13 +6,13 @@
 Welcome to SparklingGraph's documentation!
 ==========================================
 
-For bigger insight please refere to  `a API`_ documentation in ScalaDocs.
+For bigger insight please refer to  `a API`_ documentation in ScalaDocs.
 
 Contents:
 
 .. toctree::
    :maxdepth: 2
-   
+
    howto
    loading
    generators

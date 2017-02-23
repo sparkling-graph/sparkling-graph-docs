@@ -5,7 +5,7 @@ How To
 Release
 -----------
 
-Publish process is based on `sbt-sonatype <https://github.com/xerial/sbt-sonatype>`_ plugn 
+Publish process is based on `sbt-sonatype <https://github.com/xerial/sbt-sonatype>`_ plugin 
 
 Export credentials for sonatype repository:
 
@@ -25,8 +25,3 @@ After that close staging repository and release to central using
 .. code-block:: bash
 
 	sbt sonatypeRelease
-
-
-
-
-
