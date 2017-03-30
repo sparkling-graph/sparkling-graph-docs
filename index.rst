@@ -3,12 +3,16 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+.. meta::
+   :description: SparklingGraph is an library that extends Apache GraphX funcionalities. It gives ability to easly load, process, analyse and experiment on large graphs using Spark infrastructure.
+   :keywords: graph, measure, spark, machine learning, comunity detection methods, network analysis, graph algorithms, big data, vertex, link predication, heuristics, coarsing, approximation, dsl
+
 Welcome to SparklingGraph's documentation!
 ==========================================
 
 For bigger insight please refere to  `a API`_ documentation in ScalaDocs.
 
-Contents:
+
 
 .. toctree::
    :maxdepth: 2

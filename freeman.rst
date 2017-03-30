@@ -1,5 +1,5 @@
 Freeman's network centrality
-=====================
+=============================
 
 Freeman's centrality tells us how heterogenous is degree centrality ammong vertices of network. For start network, we will get a value 1. 
 

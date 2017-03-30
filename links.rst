@@ -5,7 +5,7 @@ Using library you can easily use state-of-the-art methods for link prediction.
 
 
 Measure based link prediction
-------------------
+--------------------------------
 
 Basic appraoch that is using simmilarity computed between two vertices. `MeasureBasedLnkPredictor`<http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.api.operators.algorithms.link.MeasureBasedLnkPredictor>_ is trait for that approach
 
