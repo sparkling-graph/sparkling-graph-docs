@@ -23,7 +23,7 @@ Alghotim block scheme
 Examples
 ----------------------
 
-Alghoritm API lets to compute paths :
+Alghoritm `API`_ lets to compute paths :
 
 *	For single vertex:
 
@@ -72,3 +72,6 @@ Alghoritm API lets to compute paths :
 		val graphWithPaths =  ApproximatedShortestPathsAlgorithm.computeShortestPathsLengthsIterative(graph, (g:Graph[_,_])=>bucketSize)
 		val paths : VertexRDD[Iterable[(VertexId, JDouble)]  =  graphWithPaths.vertices
 
+
+
+.. _API: http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.operators.algorithms.aproximation.ApproximatedShortestPathsAlgorithm$

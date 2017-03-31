@@ -3,6 +3,7 @@ Partitioning methods
 
 Library provides multiple methods for graph partitioning. By default GraphX provides only random methods, in SparklingGraph you can find approaches that are using structural properties of graphs in order to minimize computation times and storage overheads. 
 
+All methods can be found in `partitioning package`_
 
 
 Propagation bases
@@ -78,3 +79,8 @@ That is solution that use PSCAN alghoritm in conduction with epsilon parameter s
 	// load your graph (for example using Graph loading API)
 	val numberOfRequiredPartitions=24
 	val partitionedGraph =  PSCANBasedPartitioning.partitionGraphBy(graph,numberOfRequiredPartitions)
+
+
+
+
+.. _partitioning package: http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.operators.partitioning.package
