@@ -23,6 +23,8 @@ For bigger insight please refer to  `a API`_ documentation in ScalaDocs.
    comunities
    coarsening
    measures
+   partitioning
+   aapsp
    links
    todos
 

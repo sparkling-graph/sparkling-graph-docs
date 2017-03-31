@@ -1,13 +1,13 @@
 Graph coarsening
 =====================
 
-In order to limit computation, you can decrease graph size using coarsening operator. New graph will be smaller because  neighborhood vertices will be coarsed into single vertices. Edges are created using edges from input vertices, filtering self loops. 
+In order to limit computation, you can decrease graph size using coarsening operator. New graph will be smaller because  neighborhood vertices will be coarsed into single vertices. Edges are created using edges from input graph, filtering self loops. 
 
 
 Label propagation based graph coarsening
 -------------------------------------------
 
-One of implementation is based on label propagation. Just three iterations are enaught in order to coarse graph. Implementation propagates vertex identifier to neighbours. Neighbours groups them and sorts by number of occurences. If number of occurences is same, greater one is selected (in order to gurante deterministic execution). After that last id is selected (one with bigest number of occurences, or greatest one). After three iterations, vertices has their final IDs.
+One of implementation is based on label propagation. Implementation propagates vertex identifier to neighbours. Neighbours groups them and sorts by number of occurences. If number of occurences is same, minimal one is selected (in order to gurante deterministic execution). Otherwise, vertex identifier with bigest number of occurencies (or minimal one in case of same occurencies number) is selected .
 
 .. code-block:: scala
 	
