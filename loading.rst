@@ -25,7 +25,7 @@ To load graph from `CSV`_ file you must use `CSV implementation`_ of `GraphLoade
 	import ml.sparkling.graph.loaders.csv.GraphFromCsv.CSV
 	import org.apache.spark.SparkContext
 
-	implicit ctx:SparkContext=??? 
+	implicit val ctx:SparkContext=??? 
 	// initialize your SparkContext as implicit value so it will be passed automatically to graph loading API
 
 	val filePath="your_graph_path.csv"
