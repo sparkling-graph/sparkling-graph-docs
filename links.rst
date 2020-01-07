@@ -13,7 +13,7 @@ Basic appraoch that is using simmilarity computed between two vertices. `Measure
 Basic measure based link prediction
 +++++++++++++++++++++++++++++++++++++
 
-Most basic implementation of measure based link prediction. All possible vertices combinations are computed for given graph. In next step, similarity measure is computed for each combination. Combinations that exsits or creates loops (self connections) are filtered out. Combinations that have similarity lower than given treshold are also filtered out. Implementation can be found in `BasicLinkPredictor <http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.operators.algorithms.link.BasicLinkPredictor$>`_
+Most basic implementation of measure based link prediction. All possible vertices combinations are computed for given graph. In next step, similarity measure is computed for each combination. Combinations that exists or creates loops (self connections) are filtered out. Combinations that have similarity lower than given treshold are also filtered out. Implementation can be found in `BasicLinkPredictor <http://sparkling-graph.github.io/sparkling-graph/latest/api/#ml.sparkling.graph.operators.algorithms.link.BasicLinkPredictor$>`_
 
 .. code-block:: scala
 	
